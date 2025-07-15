@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/style.css">
+  <script ></script>
+  <title>Document</title>
+</head>
+<body>
+<h2 class="dashboard-title">Welcome Admin </h2>
+
+  <div class="dashboard-grid">
+    <div class="dashboard-card" onclick="showSection('products')">
+      <h3>📦 Products</h3>
+      <p>Add / Edit / Remove</p>
+    </div>
+    <div class="dashboard-card" onclick="showSection('orders')">
+      <h3>📋 Orders</h3>
+      <p>View Customer Orders</p>
+    </div>
+    <div class="dashboard-card" onclick="showSection('users')">
+      <h3>👥 Users</h3>
+      <p>Manage Accounts</p>
+    </div>
+  </div>
+
+  <!-- Product Section -->
+  <div id="products" class="dashboard-section active">
+    <h3>Manage Products</h3>
+    <form>
+      <input type="text" placeholder="Product Name">
+      <input type="number" placeholder="Price">
+      <input type="text" placeholder="Category">
+      <button type="submit">Add</button>
+    </form>
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Price</th><th>Actions</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Black Pants</td><td>450 EG</td><td><button>Edit</button> <button>Delete</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Orders Section -->
+  <div id="orders" class="dashboard-section">
+    <h3>Customer Orders</h3>
+    <table>
+      <thead>
+        <tr><th>Order ID</th><th>Status</th><th>Total</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>#1001</td><td>Shipped</td><td>500 EG</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Users Section -->
+  <div id="users" class="dashboard-section">
+    <h3>User Management</h3>
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Email</th><th>Actions</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fatma</td><td>fatma@example.com</td><td><button>Block</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Settings Section -->
+  <div id="settings" class="dashboard-section">
+    <h3>Site Settings</h3>
+    <form>
+      <input type="text" placeholder="Banner Title">
+      <input type="text" placeholder="Homepage Offer">
+      <button type="submit">Save</button>
+    </form>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.dashboard-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>

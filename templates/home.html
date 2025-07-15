@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}SHE Shop{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <div class="navbar-logo logo-circle">She</div>
+        <!-- Search Form -->
+        <form class="navbar-search-form" action="/search" method="get">
+          <div class="navbar-search">
+            <input type="text" name="q" placeholder="Search..." />
+          </div>
+          <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+        </form>
+
+        <ul class="navbar-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+          <li><a href="/signin">Sign In</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+  <!-- _________________________________________________________________________________________________________________________________ -->
+
+
+<section class="hero">
+  <h1>Welcome to SHE Shop</h1>
+  <p>Discover your new favorite look today 💕</p>
+  <a href="#new-arrivals" class="btn-primary">Shop Now</a>
+</section>
+
+<section class="categories">
+  <h2>Shop by Category</h2>
+  <div class="category-grid">
+    <!-- Each category box -->
+    <div class="category-card">
+      <img src="/static/images/dress_cat.webp" alt="Dresses">
+      <h3>Dresses</h3>
+    </div>
+    <!-- Repeat for others -->
+  </div>
+</section>
+
+
+
+
+<section class="featured-products" id="new-arrivals">
+  <h2>New Arrivals</h2>
+  <div class="product-grid">
+    <!-- Product card -->
+    <div class="product-card">
+      <img src="/static/images/pant 1.jpg" alt="Product 1">
+      <h3>Formal Pants</h3>
+      <p>EG 450</p>
+      <a href="/cart" class="btn-add">Add to Cart</a>
+    </div>
+    <!-- More cards -->
+  </div>
+</section>
+
+
+
+<section class="about-shop home-about" href="#about">
+  <h2>Why SHE Shop?</h2>
+  <p>We bring you curated styles with elegance and comfort in mind — because every woman deserves to shine.</p>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">SHE Shop</div>
+  
+      <ul class="footer-links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+      </ul>
+  
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      
+      <p class="footer-copy">&copy; 2025 SHE Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
