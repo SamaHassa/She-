@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sign In | SHE Shop</title>
-  <link rel="stylesheet" href="/static/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-</head>
-<body>
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+
   <div class="auth-container">
     <h2>Welcome Back</h2>
     <form class="auth-form">
@@ -17,5 +13,11 @@
     </form>
     <p class="auth-footer">Don’t have an account? <a href="/signup">Sign Up</a></p>
   </div>
-</body>
-</html>
+
+  
+
+{% endblock body %}
+
+
+
+

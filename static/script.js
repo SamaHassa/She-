@@ -10,3 +10,12 @@ document.querySelectorAll('.remove-btn').forEach(button => {
     }
   });
 });
+
+
+
+
+function showSection(id) {
+  document.querySelectorAll('.dashboard-section').forEach(section => {
+      section.classList.remove('active');});
+      document.getElementById(id).classList.add('active');
+    }

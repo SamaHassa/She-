@@ -1,127 +1,58 @@
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}SHE Shop{% endblock %}</title>
-  <link rel="stylesheet" href="/static/style.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-</head>
-<body>
+{% extends "base.html" %}
 
-  <div class="main-content">
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="navbar-container">
-        <!-- Logo -->
-        <div class="navbar-logo logo-circle">She</div>
-        <!-- Search Form -->
-        <form class="navbar-search-form" action="/search" method="get">
-          <div class="navbar-search">
-            <input type="text" name="q" placeholder="Search..." />
+
+{% block content  %}
+
+    <div class="checkout-container">
+      <h2>Checkout</h2>
+
+      <div class="checkout-sections">
+
+        <!-- 🏠 Shipping Information -->
+        <div class="checkout-form">
+          <h3>Shipping Details</h3>
+          <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="text" placeholder="Address" required>
+            <input type="text" placeholder="City / Governorate" required>
+            <input type="text" placeholder="ZIP / Postal Code" required>
+            <textarea placeholder="Order Notes (Optional)" rows="3"></textarea>
+          </form>
+        </div>
+
+        <!-- 💸 Order Summary -->
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div class="summary-item">
+            <span>Pink Floral Dress x1</span>
+            <span>300 EGP</span>
           </div>
-          <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
-        </form>
-        <!-- Navigation Links -->
-        <ul class="navbar-links">
-          <li><a href="/about">About</a></li>
-          <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
-          <li><a href="/signin">Sign In</a></li>
-          <li><a href="/signup">Sign Up</a></li>
-        </ul>
+          <div class="summary-item">
+            <span>Beige Heels x1</span>
+            <span>450 EGP</span>
+          </div>
+          <hr>
+          <div class="summary-item">
+            <span>Subtotal</span>
+            <span>750 EGP</span>
+          </div>
+          <div class="summary-item">
+            <span>Shipping</span>
+            <span>+50 EGP</span>
+          </div>
+          <hr>
+          <div class="summary-total">
+            <strong>Total</strong>
+            <strong>800 EGP</strong>
+          </div>
+
+          <button class="checkout-btn">Place Order</button>
+        </div>
+
       </div>
-    </nav>
-  </div>
-
-
-
-
-  <!-- _________________________________________________________________________________________________________________________________ -->
-
-
-  <div class="checkout-container">
-    <h2>Checkout</h2>
-
-    <div class="checkout-sections">
-
-      <!-- 🏠 Shipping Information -->
-      <div class="checkout-form">
-        <h3>Shipping Details</h3>
-        <form>
-          <input type="text" placeholder="Full Name" required>
-          <input type="email" placeholder="Email Address" required>
-          <input type="tel" placeholder="Phone Number" required>
-          <input type="text" placeholder="Address" required>
-          <input type="text" placeholder="City / Governorate" required>
-          <input type="text" placeholder="ZIP / Postal Code" required>
-          <textarea placeholder="Order Notes (Optional)" rows="3"></textarea>
-        </form>
-      </div>
-
-      <!-- 💸 Order Summary -->
-      <div class="order-summary">
-        <h3>Order Summary</h3>
-        <div class="summary-item">
-          <span>Pink Floral Dress x1</span>
-          <span>300 EGP</span>
-        </div>
-        <div class="summary-item">
-          <span>Beige Heels x1</span>
-          <span>450 EGP</span>
-        </div>
-        <hr>
-        <div class="summary-item">
-          <span>Subtotal</span>
-          <span>750 EGP</span>
-        </div>
-        <div class="summary-item">
-          <span>Shipping</span>
-          <span>+50 EGP</span>
-        </div>
-        <hr>
-        <div class="summary-total">
-          <strong>Total</strong>
-          <strong>800 EGP</strong>
-        </div>
-
-        <button class="checkout-btn">Place Order</button>
-      </div>
-
     </div>
-  </div>
   
-  
-  
-  
-  
-  <!-- _________________________________________________________________________________________________________________________________ -->
 
-
-
-    <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">SHE Shop</div>
-  
-      <ul class="footer-links">
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/faq">FAQ</a></li>
-        <li><a href="/privacy">Privacy</a></li>
-      </ul>
-  
-      <div class="footer-socials">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      </div>
-      
-      <p class="footer-copy">&copy; 2025 SHE Shop. All rights reserved.</p>
-    </div>
-  </footer>
-
-</body>
-</html>
+{% endblock content  %}

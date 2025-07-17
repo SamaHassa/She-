@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sign Up | SHE Shop</title>
-  <link rel="stylesheet" href="/static/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <div class="auth-container">
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="auth-container">
     <h2>Create Account</h2>
     <form class="auth-form">
       <input type="text" placeholder="Username" required />
@@ -19,5 +12,5 @@
     </form>
     <p class="auth-footer">Already have an account? <a href="/signin">Sign In</a></p>
   </div>
-</body>
-</html>
+  
+{% endblock body %}

@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/static/style.css">
-  <script ></script>
-  <title>Document</title>
-</head>
-<body>
-<h2 class="dashboard-title">Welcome Admin </h2>
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <h2 class="dashboard-title">Welcome Admin </h2>
 
   <div class="dashboard-grid">
     <div class="dashboard-card" onclick="showSection('products')">
@@ -80,13 +74,11 @@
     </form>
   </div>
 
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.dashboard-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
-</body>
-</html>
+
+
+{% endblock body %}
+
+
+
+
+
